@@ -1,0 +1,37 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <div *ngIf="pricing">
+            <h2><span jhiTranslate="payParkApp.pricing.detail.title">Pricing</span> {{pricing.id}}</h2>
+            <hr>
+            <jhi-alert-error></jhi-alert-error>
+            <dl class="row-md jh-entity-details">
+                <dt><span jhiTranslate="payParkApp.pricing.amoount">Amoount</span></dt>
+                <dd>
+                    <span>{{pricing.amoount}}</span>
+                </dd>
+                <dt><span jhiTranslate="payParkApp.pricing.currency">Currency</span></dt>
+                <dd>
+                    <span>{{pricing.currency}}</span>
+                </dd>
+                <dt><span jhiTranslate="payParkApp.pricing.location">Location</span></dt>
+                <dd>
+                    <div *ngIf="pricing.location">
+                        <a [routerLink]="['/location', pricing.location?.id, 'view']">{{pricing.location?.id}}</a>
+                    </div>
+                </dd>
+            </dl>
+
+            <button type="submit"
+                    (click)="previousState()"
+                    class="btn btn-info">
+                <fa-icon [icon]="'arrow-left'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back"> Back</span>
+            </button>
+
+            <button type="button"
+                    [routerLink]="['/pricing', pricing.id, 'edit']"
+                    class="btn btn-primary">
+                <fa-icon [icon]="'pencil-alt'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit"> Edit</span>
+            </button>
+        </div>
+    </div>
+</div>

@@ -38,6 +38,14 @@ public class CacheConfiguration {
             cm.createCache(com.pay.park.domain.User.class.getName(), jcacheConfiguration);
             cm.createCache(com.pay.park.domain.Authority.class.getName(), jcacheConfiguration);
             cm.createCache(com.pay.park.domain.User.class.getName() + ".authorities", jcacheConfiguration);
+            cm.createCache(com.pay.park.domain.Country.class.getName(), jcacheConfiguration);
+            cm.createCache(com.pay.park.domain.Vehicle.class.getName(), jcacheConfiguration);
+            cm.createCache(com.pay.park.domain.Preference.class.getName(), jcacheConfiguration);
+            cm.createCache(com.pay.park.domain.Notification.class.getName(), jcacheConfiguration);
+            cm.createCache(com.pay.park.domain.Parking.class.getName(), jcacheConfiguration);
+            cm.createCache(com.pay.park.domain.Location.class.getName(), jcacheConfiguration);
+            cm.createCache(com.pay.park.domain.Pricing.class.getName(), jcacheConfiguration);
+            cm.createCache(com.pay.park.domain.Card.class.getName(), jcacheConfiguration);
             // jhipster-needle-ehcache-add-entry
         };
     }

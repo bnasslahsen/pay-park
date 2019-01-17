@@ -1,0 +1,23 @@
+{
+    "payParkApp": {
+        "pricing": {
+            "home": {
+                "title": "Pricings",
+                "createLabel": "Create a new Pricing",
+                "createOrEditLabel": "Create or edit a Pricing"
+            },
+            "created": "A new Pricing is created with identifier {{ param }}",
+            "updated": "A Pricing is updated with identifier {{ param }}",
+            "deleted": "A Pricing is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Are you sure you want to delete Pricing {{ id }}?"
+            },
+            "detail": {
+                "title": "Pricing"
+            },
+            "amoount": "Amoount",
+            "currency": "Currency",
+            "location": "Location"
+        }
+    }
+}

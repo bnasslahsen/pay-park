@@ -1,0 +1,30 @@
+{
+    "name": "Preference",
+    "fields": [
+        {
+            "fieldName": "mail",
+            "fieldType": "Boolean"
+        },
+        {
+            "fieldName": "sms",
+            "fieldType": "Boolean"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "many-to-one",
+            "relationshipName": "user",
+            "otherEntityName": "user",
+            "otherEntityField": "id"
+        }
+    ],
+    "changelogDate": "20190117193800",
+    "entityTableName": "preference",
+    "dto": "no",
+    "pagination": "no",
+    "service": "no",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "clientRootFolder": "",
+    "applications": "*"
+}

@@ -1,0 +1,30 @@
+{
+    "name": "Notification",
+    "fields": [
+        {
+            "fieldName": "date",
+            "fieldType": "LocalDate"
+        },
+        {
+            "fieldName": "message",
+            "fieldType": "String"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "many-to-one",
+            "relationshipName": "parking",
+            "otherEntityName": "parking",
+            "otherEntityField": "id"
+        }
+    ],
+    "changelogDate": "20190117193801",
+    "entityTableName": "notification",
+    "dto": "no",
+    "pagination": "no",
+    "service": "no",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "clientRootFolder": "",
+    "applications": "*"
+}

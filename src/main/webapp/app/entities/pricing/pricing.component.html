@@ -1,0 +1,62 @@
+<div>
+    <h2 id="page-heading">
+        <span jhiTranslate="payParkApp.pricing.home.title">Pricings</span>
+        <button id="jh-create-entity" class="btn btn-primary float-right jh-create-entity create-pricing" [routerLink]="['/pricing/new']">
+            <fa-icon [icon]="'plus'"></fa-icon>
+            <span  jhiTranslate="payParkApp.pricing.home.createLabel">
+            Create new Pricing
+            </span>
+        </button>
+    </h2>
+    <jhi-alert></jhi-alert>
+    <br/>
+    <div class="table-responsive" *ngIf="pricings">
+        <table class="table table-striped">
+            <thead>
+            <tr>
+            <th><span jhiTranslate="global.field.id">ID</span></th>
+            <th><span jhiTranslate="payParkApp.pricing.amoount">Amoount</span></th>
+            <th><span jhiTranslate="payParkApp.pricing.currency">Currency</span></th>
+            <th><span jhiTranslate="payParkApp.pricing.location">Location</span></th>
+            <th></th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr *ngFor="let pricing of pricings ;trackBy: trackId">
+                <td><a [routerLink]="['/pricing', pricing.id, 'view' ]">{{pricing.id}}</a></td>
+                <td>{{pricing.amoount}}</td>
+                <td>{{pricing.currency}}</td>
+                <td>
+                    <div *ngIf="pricing.location">
+                        <a [routerLink]="['../location', pricing.location?.id, 'view' ]" >{{pricing.location?.id}}</a>
+                    </div>
+                </td>
+                <td class="text-right">
+                    <div class="btn-group flex-btn-group-container">
+                        <button type="submit"
+                                [routerLink]="['/pricing', pricing.id, 'view' ]"
+                                class="btn btn-info btn-sm">
+                            <fa-icon [icon]="'eye'"></fa-icon>
+                            <span class="d-none d-md-inline" jhiTranslate="entity.action.view">View</span>
+                        </button>
+                        <button type="submit"
+                                [routerLink]="['/pricing', pricing.id, 'edit']"
+                                class="btn btn-primary btn-sm">
+                            <fa-icon [icon]="'pencil-alt'"></fa-icon>
+                            <span class="d-none d-md-inline" jhiTranslate="entity.action.edit">Edit</span>
+                        </button>
+                        <button type="submit"
+                                [routerLink]="['/', { outlets: { popup: 'pricing/'+ pricing.id + '/delete'} }]"
+                                replaceUrl="true"
+                                queryParamsHandling="merge"
+                                class="btn btn-danger btn-sm">
+                            <fa-icon [icon]="'times'"></fa-icon>
+                            <span class="d-none d-md-inline" jhiTranslate="entity.action.delete">Delete</span>
+                        </button>
+                    </div>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

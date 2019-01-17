@@ -5,6 +5,21 @@
     xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.5.xsd">
 
     <include file="config/liquibase/changelog/00000000000000_initial_schema.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20190117193758_added_entity_Country.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20190117193759_added_entity_Vehicle.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20190117193800_added_entity_Preference.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20190117193801_added_entity_Notification.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20190117193802_added_entity_Parking.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20190117193803_added_entity_Location.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20190117193804_added_entity_Pricing.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20190117193805_added_entity_Card.xml" relativeToChangelogFile="false"/>
     <!-- jhipster-needle-liquibase-add-changelog - JHipster will add liquibase changelogs here -->
+    <include file="config/liquibase/changelog/20190117193759_added_entity_constraints_Vehicle.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20190117193800_added_entity_constraints_Preference.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20190117193801_added_entity_constraints_Notification.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20190117193802_added_entity_constraints_Parking.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20190117193803_added_entity_constraints_Location.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20190117193804_added_entity_constraints_Pricing.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20190117193805_added_entity_constraints_Card.xml" relativeToChangelogFile="false"/>
     <!-- jhipster-needle-liquibase-add-constraints-changelog - JHipster will add liquibase constraints changelogs here -->
 </databaseChangeLog>

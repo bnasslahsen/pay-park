@@ -1,0 +1,37 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <div *ngIf="notification">
+            <h2><span jhiTranslate="payParkApp.notification.detail.title">Notification</span> {{notification.id}}</h2>
+            <hr>
+            <jhi-alert-error></jhi-alert-error>
+            <dl class="row-md jh-entity-details">
+                <dt><span jhiTranslate="payParkApp.notification.date">Date</span></dt>
+                <dd>
+                    <span>{{notification.date}}</span>
+                </dd>
+                <dt><span jhiTranslate="payParkApp.notification.message">Message</span></dt>
+                <dd>
+                    <span>{{notification.message}}</span>
+                </dd>
+                <dt><span jhiTranslate="payParkApp.notification.parking">Parking</span></dt>
+                <dd>
+                    <div *ngIf="notification.parking">
+                        <a [routerLink]="['/parking', notification.parking?.id, 'view']">{{notification.parking?.id}}</a>
+                    </div>
+                </dd>
+            </dl>
+
+            <button type="submit"
+                    (click)="previousState()"
+                    class="btn btn-info">
+                <fa-icon [icon]="'arrow-left'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back"> Back</span>
+            </button>
+
+            <button type="button"
+                    [routerLink]="['/notification', notification.id, 'edit']"
+                    class="btn btn-primary">
+                <fa-icon [icon]="'pencil-alt'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit"> Edit</span>
+            </button>
+        </div>
+    </div>
+</div>

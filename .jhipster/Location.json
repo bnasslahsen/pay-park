@@ -1,0 +1,32 @@
+{
+    "name": "Location",
+    "fields": [
+        {
+            "fieldName": "postalCode",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "city",
+            "fieldType": "String"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "one-to-one",
+            "relationshipName": "country",
+            "otherEntityName": "country",
+            "otherEntityField": "id",
+            "ownerSide": true,
+            "otherEntityRelationshipName": "location"
+        }
+    ],
+    "changelogDate": "20190117193803",
+    "entityTableName": "location",
+    "dto": "no",
+    "pagination": "no",
+    "service": "no",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "clientRootFolder": "",
+    "applications": "*"
+}
