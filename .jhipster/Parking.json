@@ -1,0 +1,38 @@
+{
+    "name": "Parking",
+    "fields": [
+        {
+            "fieldName": "startDate",
+            "fieldType": "LocalDate"
+        },
+        {
+            "fieldName": "endDate",
+            "fieldType": "LocalDate"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "one-to-one",
+            "relationshipName": "location",
+            "otherEntityName": "location",
+            "otherEntityField": "id",
+            "ownerSide": true,
+            "otherEntityRelationshipName": "parking"
+        },
+        {
+            "relationshipType": "many-to-one",
+            "relationshipName": "vehicle",
+            "otherEntityName": "vehicle",
+            "otherEntityField": "id"
+        }
+    ],
+    "changelogDate": "20190117193802",
+    "entityTableName": "parking",
+    "dto": "no",
+    "pagination": "no",
+    "service": "no",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "clientRootFolder": "",
+    "applications": "*"
+}

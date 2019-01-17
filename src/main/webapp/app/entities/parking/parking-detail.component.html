@@ -1,0 +1,43 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <div *ngIf="parking">
+            <h2><span jhiTranslate="payParkApp.parking.detail.title">Parking</span> {{parking.id}}</h2>
+            <hr>
+            <jhi-alert-error></jhi-alert-error>
+            <dl class="row-md jh-entity-details">
+                <dt><span jhiTranslate="payParkApp.parking.startDate">Start Date</span></dt>
+                <dd>
+                    <span>{{parking.startDate}}</span>
+                </dd>
+                <dt><span jhiTranslate="payParkApp.parking.endDate">End Date</span></dt>
+                <dd>
+                    <span>{{parking.endDate}}</span>
+                </dd>
+                <dt><span jhiTranslate="payParkApp.parking.location">Location</span></dt>
+                <dd>
+                    <div *ngIf="parking.location">
+                        <a [routerLink]="['/location', parking.location?.id, 'view']">{{parking.location?.id}}</a>
+                    </div>
+                </dd>
+                <dt><span jhiTranslate="payParkApp.parking.vehicle">Vehicle</span></dt>
+                <dd>
+                    <div *ngIf="parking.vehicle">
+                        <a [routerLink]="['/vehicle', parking.vehicle?.id, 'view']">{{parking.vehicle?.id}}</a>
+                    </div>
+                </dd>
+            </dl>
+
+            <button type="submit"
+                    (click)="previousState()"
+                    class="btn btn-info">
+                <fa-icon [icon]="'arrow-left'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back"> Back</span>
+            </button>
+
+            <button type="button"
+                    [routerLink]="['/parking', parking.id, 'edit']"
+                    class="btn btn-primary">
+                <fa-icon [icon]="'pencil-alt'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit"> Edit</span>
+            </button>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,27 @@
+{
+    "payParkApp": {
+        "card": {
+            "home": {
+                "title": "Cards",
+                "createLabel": "Créer un nouveau Card",
+                "createOrEditLabel": "Créer ou éditer un Card"
+            },
+            "created": "Un nouveau Card a été créé avec l'identifiant {{ param }}",
+            "updated": "Le Card avec l'identifiant {{ param }} a été mis à jour",
+            "deleted": "Le Card avec l'identifiant {{ param }} a été supprimé",
+            "delete": {
+                "question": "Etes-vous certain de vouloir supprimer le Card {{ id }} ?"
+            },
+            "detail": {
+                "title": "Card"
+            },
+            "type": "Type",
+            "fullName": "Full Name",
+            "creditCardNumber": "Credit Card Number",
+            "cvv": "Cvv",
+            "expirationMonth": "Expiration Month",
+            "expirationYear": "Expiration Year",
+            "user": "User"
+        }
+    }
+}

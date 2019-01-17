@@ -1,0 +1,46 @@
+{
+    "name": "Card",
+    "fields": [
+        {
+            "fieldName": "type",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "fullName",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "creditCardNumber",
+            "fieldType": "Long"
+        },
+        {
+            "fieldName": "cvv",
+            "fieldType": "Long"
+        },
+        {
+            "fieldName": "expirationMonth",
+            "fieldType": "Long"
+        },
+        {
+            "fieldName": "expirationYear",
+            "fieldType": "Long"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "many-to-one",
+            "relationshipName": "user",
+            "otherEntityName": "user",
+            "otherEntityField": "id"
+        }
+    ],
+    "changelogDate": "20190117193805",
+    "entityTableName": "card",
+    "dto": "no",
+    "pagination": "no",
+    "service": "no",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "clientRootFolder": "",
+    "applications": "*"
+}

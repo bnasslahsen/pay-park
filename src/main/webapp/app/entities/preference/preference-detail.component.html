@@ -1,0 +1,35 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <div *ngIf="preference">
+            <h2><span jhiTranslate="payParkApp.preference.detail.title">Preference</span> {{preference.id}}</h2>
+            <hr>
+            <jhi-alert-error></jhi-alert-error>
+            <dl class="row-md jh-entity-details">
+                <dt><span jhiTranslate="payParkApp.preference.mail">Mail</span></dt>
+                <dd>
+                    <span>{{preference.mail}}</span>
+                </dd>
+                <dt><span jhiTranslate="payParkApp.preference.sms">Sms</span></dt>
+                <dd>
+                    <span>{{preference.sms}}</span>
+                </dd>
+                <dt><span jhiTranslate="payParkApp.preference.user">User</span></dt>
+                <dd>
+                    {{preference.user?.id}}
+                </dd>
+            </dl>
+
+            <button type="submit"
+                    (click)="previousState()"
+                    class="btn btn-info">
+                <fa-icon [icon]="'arrow-left'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back"> Back</span>
+            </button>
+
+            <button type="button"
+                    [routerLink]="['/preference', preference.id, 'edit']"
+                    class="btn btn-primary">
+                <fa-icon [icon]="'pencil-alt'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit"> Edit</span>
+            </button>
+        </div>
+    </div>
+</div>
