@@ -1,0 +1,66 @@
+
+entity User {
+	firstName String,
+	lastName String,
+    password String,
+	email String,
+	phoneNumber String
+}
+
+entity Country {
+    countryCode String,
+	countryName String
+}
+
+entity Vehicle {
+	registrationId String,
+    description String
+}
+
+entity Preference {
+	mail Boolean,
+	sms Boolean
+}
+
+entity Notification {
+	date LocalDate,
+	message String
+}
+
+entity Parking {
+	startDate LocalDate,
+    endDate LocalDate
+}
+
+entity Location {
+	postalCode String,
+	city String
+}
+
+entity Pricing {
+	amoount BigDecimal,
+    currency String
+}
+
+entity Card {
+	type String,
+	fullName String,
+	creditCardNumber Long,
+	cvv Long,
+    expirationMonth Long,
+    expirationYear Long
+}
+
+relationship ManyToOne {
+    Preference{user} to User,
+    Card{user} to User,
+    Vehicle{user} to User,
+    Parking{vehicle} to Vehicle,
+    Notification{parking} to Parking
+}
+
+relationship OneToOne {
+	Location{country} to Country,
+    Pricing{location} to Location,
+    Parking{location} to Location
+}
